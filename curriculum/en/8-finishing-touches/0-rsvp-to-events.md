@@ -13,7 +13,7 @@ If you need help, check to see if your question has already been asked in **#sec
 
 We want users to also be able to RSVP to an event on the event details page.
 
-In the same `pages/events/[id].js` file, import our wallet and contract functions at the top:
+In the same `pages/event/[id].js` file, import our wallet and contract functions at the top:
 
 ```javascript
 import { useState } from "react";
@@ -34,7 +34,7 @@ const [loading, setLoading] = useState(null);
 const [currentTimestamp, setEventTimestamp] = useState(new Date().getTime());
 ```
 
-Now we’ll check whether the user has already RSVP’d or not by creating a function called `checkIfAlreadyRSVPed`. If they haven't already, then the user will see a button to RSVP. To do find out if they have already RSVPed, we can loop through the rsvps array from the event and see if any of the wallet addresses match.
+Now we’ll check whether the user has already RSVP’d or not by creating a function called `checkIfAlreadyRSVPed`. If they haven't already, then the user will see a button to RSVP. To find out if they have already RSVPed, we can loop through the rsvps array from the event and see if any of the wallet addresses match.
 
 ```javascript
 function checkIfAlreadyRSVPed() {
@@ -113,7 +113,7 @@ Just like in our `create-event` page, we will want to show an alert based on the
 
 Above the section that shows the number of RSVPs and max capacity for the event, we can add a button to RSVP which we will only show if the user has not already RSVPed. If they have already RSVPed, we can show them a link to the event.
 
-All of this is wrapped in a conditional statement that also checks if the user is logged in. If they aren't logged in, we can show the the connect wallet button.
+All of this is wrapped in a conditional statement that also checks if the user is logged in. If they aren't logged in, we can show them the connect wallet button.
 
 If the event has already passed, we will hide all of this and let the user know that the event has already happened.
 

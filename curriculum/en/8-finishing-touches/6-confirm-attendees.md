@@ -105,7 +105,7 @@ const confirmAllAttendees = async () => {
 };
 ```
 
-Create a `checkIfConfirmed` funtion so we can easily check if attendees have already been confirmed. This method will just loop thorugh all confirmed addresses to see if any of them matches the user's address.
+Create a `checkIfConfirmed` function so we can easily check if attendees have already been confirmed. This method will just loop through all confirmed addresses to see if any of them matches the user's address.
 
 ```javascript
 function checkIfConfirmed(event, address) {

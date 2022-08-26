@@ -7,7 +7,7 @@ tweet: "I just queried my subgraph with #30DaysofWeb3 @womenbuildweb3 ⛓"
 
 Open up the `pages/event/[id].js` file, which uses dynamic routing with Next.js to create a new page for each event minted based on the eventID. This is where we can show the details for a single event and users can RSVP.
 
-First, we will need import `gql` the apollo client at the top of the page.
+First, we will need to import `gql`, the apollo client at the top of the page.
 
 ```javascript
 import { gql } from "@apollo/client";
@@ -68,7 +68,7 @@ function Event({event}) {
 
 Notice that this looks a lot like the query in our playground, but it’s nested inside a query object called **Event** where we must define the query input type (in this case, it's a string).
 
-Now we can access the event from the props by using destructuring. To make sure we are receiving the event data we requested, we can try to logging the `event` to the console.
+Now we can access the event from the props by using destructuring. To make sure we are receiving the event data we requested, we can try logging the `event` to the console.
 
 ```javascript
 function Event({ event }) {
